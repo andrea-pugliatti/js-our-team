@@ -70,10 +70,22 @@ const buildCard = (member) => {
 	return markup;
 };
 
+/**
+ * **showMembers**
+ * Builds cards for each member and attaches them to the given element.
+ * @param {HTMLElement} element
+ * @param  {...object} members
+ */
+const showMembers = (element, ...members) => {
+	// Build a card for each team member and add to html
+	for (let i = 0; i < members.length; i++) {
+		console.log(members[i]);
+		element.innerHTML += buildCard(members[i]);
+	}
+};
+
 // Select members element
 const membersElement = document.getElementById("members");
 
 // Build a card for each team member and add to html
-for (let i = 0; i < teamMembers.length; i++) {
-	membersElement.innerHTML += buildCard(teamMembers[i]);
-}
+showMembers(membersElement, ...teamMembers);
