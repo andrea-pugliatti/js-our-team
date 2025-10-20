@@ -86,6 +86,30 @@ const showMembers = (element, ...members) => {
 
 // Select members element
 const membersElement = document.getElementById("members");
+// Select form
+const formElement = document.querySelector("form");
 
 // Build a card for each team member and add to html
 showMembers(membersElement, ...teamMembers);
+
+formElement.addEventListener("submit", (event) => {
+	// Prevent refresh
+	event.preventDefault();
+
+	// Select fields
+	const nameField = document.getElementById("name");
+	const roleField = document.getElementById("role");
+	const emailField = document.getElementById("email");
+	const imageField = document.getElementById("image");
+
+	const member = {
+		name: nameField.value,
+		role: roleField.value,
+		email: emailField.value,
+		img: imageField.value,
+	};
+	console.log(member);
+
+	teamMembers.push(member);
+	showMembers(membersElement, member);
+});
