@@ -19,10 +19,6 @@ body {
 	margin: 0 auto;
 }
 
-.d-flex {
-	display: flex;
-}
-
 /* Title */
 .title {
 	padding: 1rem;
@@ -41,7 +37,6 @@ body {
 /* Cards */
 .row {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	gap: 1rem;
 	margin-bottom: 2rem;
@@ -83,11 +78,12 @@ form {
 form > div {
 	margin: 0.5rem 0;
 	flex-grow: 1;
-	& > label {
-		font-size: 0.9rem;
-		display: block;
-		margin: 0.2rem 0;
-	}
+}
+
+form > div > label {
+	font-size: 0.9rem;
+	display: block;
+	margin: 0.2rem 0;
 }
 
 form input {
@@ -101,8 +97,9 @@ form .btn {
 	color: rgb(255 255 255);
 	border-radius: 20px;
 	border: 0;
-	&:hover {
-		background-color: gray;
-		cursor: pointer;
-	}
+}
+
+form .btn:hover {
+	background-color: gray;
+	cursor: pointer;
 }
