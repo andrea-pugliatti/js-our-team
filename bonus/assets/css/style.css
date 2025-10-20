@@ -40,6 +40,7 @@ body {
 	flex-wrap: wrap;
 	gap: 1rem;
 	margin-bottom: 2rem;
+	justify-content: space-evenly;
 }
 
 .card {
@@ -73,6 +74,7 @@ body {
 form {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 form > div {
@@ -95,7 +97,7 @@ form .btn {
 	padding: 0.7rem 1.5rem;
 	background-color: rgb(0 0 0);
 	color: rgb(255 255 255);
-	border-radius: 20px;
+	/* border-radius: 20px; */
 	border: 0;
 }
 
