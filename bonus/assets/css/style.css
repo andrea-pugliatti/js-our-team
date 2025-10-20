@@ -1,0 +1,83 @@
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Generics */
+
+body {
+	font-family: Verdana, Tahoma, sans-serif;
+	font-size: 16px;
+}
+
+/* Utilities */
+.container {
+	width: 70%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.d-flex {
+	display: flex;
+}
+
+/* Title */
+.title {
+	padding: 1rem;
+	text-align: center;
+}
+
+.title h1,
+.title p {
+	margin-bottom: 1rem;
+}
+
+.title h1 {
+	color: rgb(198 53 109);
+}
+
+/* Cards */
+.row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.card {
+	display: flex;
+	justify-content: flex-start;
+	width: 300px;
+	min-width: fit-content;
+	align-items: center;
+	background-color: rgb(0 0 0);
+}
+
+.card img {
+	width: 100px;
+}
+
+.card-text {
+	color: rgb(255 255 255);
+	font-size: 0.8rem;
+	padding: 1rem;
+}
+
+.card-text a {
+	color: rgb(140 200 224);
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* Form */
+form > div {
+	margin: 0.5rem;
+	input {
+		padding: 0.6rem 0.3rem;
+	}
+}
