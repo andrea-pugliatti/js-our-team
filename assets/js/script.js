@@ -48,3 +48,32 @@ const teamMembers = [
 		img: "img/female3.png",
 	},
 ];
+
+/**
+ * **buildCard**
+ * Receives an object and builds the markup for a card.
+ * @param {object} member
+ * @returns {string}
+ */
+const buildCard = (member) => {
+	const { name, role, email, img } = member;
+	const markup = `
+    <div class="card">
+      <img src="./assets/${img}" alt="Portrait">
+      <div class="card-text">
+        <h3 class="name">${name}</h3>
+        <p class="role">${role}</p>
+        <a href="mailto:${email}">${email}</a>
+      </div>
+    </div>
+  `;
+	return markup;
+};
+
+// Select members element
+const membersElement = document.getElementById("members");
+
+// Build a card for each team member and add to html
+for (let i = 0; i < teamMembers.length; i++) {
+	membersElement.innerHTML += buildCard(teamMembers[i]);
+}
