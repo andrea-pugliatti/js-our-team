@@ -48,8 +48,9 @@ body {
 
 .card {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	width: 300px;
+	min-width: fit-content;
 	align-items: center;
 	background-color: rgb(0 0 0);
 }
