@@ -102,14 +102,24 @@ formElement.addEventListener("submit", (event) => {
 	const emailField = document.getElementById("email");
 	const imageField = document.getElementById("image");
 
+	// Retrieve the values
 	const member = {
 		name: nameField.value,
 		role: roleField.value,
 		email: emailField.value,
 		img: imageField.value,
 	};
-	console.log(member);
 
+	// Push the new member to array and show on screen
 	teamMembers.push(member);
 	showMembers(membersElement, member);
+	console.log(member);
+
+	// Reset values
+	nameField.value = "";
+	roleField.value = "";
+	emailField.value = "";
+	imageField.value = "";
 });
+
+// Test Andrea Pugliatti Developer img/andrea.jpeg andrea@email.com
